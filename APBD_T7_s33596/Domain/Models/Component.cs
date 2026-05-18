@@ -6,7 +6,7 @@
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
-        public int ComponentManufacturersId { get; set; }
+        public int ComponentManufacturerId { get; set; }
         public ComponentManufacturer? ComponentManufacturer { get; set; }
 
         public int ComponentTypeId { get; set; }

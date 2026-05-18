@@ -3,10 +3,10 @@
     public class PCComponent
     {
         public int PCId { get; set; }
-        public required PC PC { get; set; } 
+        public PC PC { get; set; } = null!;
 
-        public int ComponentCode { get; set; }
-        public required Component Component { get; set; }
+        public string ComponentCode { get; set; } = string.Empty;
+        public Component Component { get; set; } = null!;
 
         public int Amount { get; set; }
 

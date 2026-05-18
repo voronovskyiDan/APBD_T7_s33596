@@ -12,11 +12,35 @@ namespace APBD_T7_s33596.Infrastructure.Db.Configuration
 
             builder.HasOne(e => e.PC)
                     .WithMany(e => e.PCComponents)
-                    .HasForeignKey(e => e.PCId);
+                    .HasForeignKey(e => e.PCId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(e => e.Component)
                    .WithMany(e => e.PCComponents)
-                   .HasForeignKey(e => e.ComponentCode);
+                   .HasForeignKey(e => e.ComponentCode)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+
+            builder.HasData(
+                new PCComponent
+                {
+                    PCId = 1,
+                    ComponentCode = "I9-14900K",
+                    Amount = 1
+                },
+                new PCComponent
+                {
+                    PCId = 1,
+                    ComponentCode = "R9-7950X",
+                    Amount = 1
+                },
+                new PCComponent
+                {
+                    PCId = 2,
+                    ComponentCode = "RTX4090",
+                    Amount = 1
+                }
+            );
         }
     }
 }
