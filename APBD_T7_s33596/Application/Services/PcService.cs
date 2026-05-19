@@ -24,7 +24,7 @@ namespace APBD_T7_s33596.Application.Services
                 Name = dto.Name,
                 Weight = dto.Weight,
                 Warranty = dto.Warranty,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = dto.CreatedAt!.Value,
                 Stock = dto.Stock
             };
 
@@ -100,7 +100,7 @@ namespace APBD_T7_s33596.Application.Services
             pc.Name = dto.Name;
             pc.Weight = dto.Weight;
             pc.Warranty = dto.Warranty;
-            pc.CreatedAt = dto.CreatedAt ?? pc.CreatedAt;
+            pc.CreatedAt = dto.CreatedAt!.Value;
             pc.Stock = dto.Stock;
 
             await _dbContext.SaveChangesAsync();
