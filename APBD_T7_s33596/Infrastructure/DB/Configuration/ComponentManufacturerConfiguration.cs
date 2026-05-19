@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace APBD_T7_s33596.Infrastructure.DB.Configuration
 {
-    public class ComponentManufacturerConfig : IEntityTypeConfiguration<ComponentManufacturer>
+    public class ComponentManufacturerConfiguration : IEntityTypeConfiguration<ComponentManufacturer>
     {
         public void Configure(EntityTypeBuilder<ComponentManufacturer> builder)
         {
             builder.Property(e => e.Abbreviation).HasMaxLength(30);
-            builder.Property(e => e.Abbreviation).HasMaxLength(300);
+            builder.Property(e => e.FullName).HasMaxLength(300);
 
             builder.HasMany(e => e.Components)
                 .WithOne(c => c.ComponentManufacturer)
