@@ -1,6 +1,6 @@
 ﻿using APBD_T7_s33596.Application.Interfaces;
 using APBD_T7_s33596.Application.Services;
-using APBD_T7_s33596.Infrastructure.Db;
+using APBD_T7_s33596.Infrastructure.DB;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

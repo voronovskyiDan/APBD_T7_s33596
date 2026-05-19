@@ -1,7 +1,7 @@
 ﻿using APBD_T7_s33596.Application.Dto;
 using APBD_T7_s33596.Application.Interfaces;
 using APBD_T7_s33596.Domain.Models;
-using APBD_T7_s33596.Infrastructure.Db;
+using APBD_T7_s33596.Infrastructure.DB;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 

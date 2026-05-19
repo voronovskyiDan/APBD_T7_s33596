@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace APBD_T7_s33596.Infrastructure.Db.Configuration
+namespace APBD_T7_s33596.Infrastructure.DB.Configuration
 {
     public class PCComponentConfiguration : IEntityTypeConfiguration<PCComponent>
     {

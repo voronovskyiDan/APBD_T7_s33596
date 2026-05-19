@@ -1,7 +1,7 @@
 ﻿using APBD_T7_s33596.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace APBD_T7_s33596.Infrastructure.Db
+namespace APBD_T7_s33596.Infrastructure.DB
 {
     public class AppDbContext : DbContext
     {
