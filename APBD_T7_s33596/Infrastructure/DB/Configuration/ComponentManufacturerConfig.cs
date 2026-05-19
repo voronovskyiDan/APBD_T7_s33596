@@ -8,8 +8,8 @@ namespace APBD_T7_s33596.Infrastructure.DB.Configuration
     {
         public void Configure(EntityTypeBuilder<ComponentManufacturer> builder)
         {
-            builder.Property(e => e.Attribute).HasMaxLength(30);
-            builder.Property(e => e.Attribute).HasMaxLength(300);
+            builder.Property(e => e.Abbreviation).HasMaxLength(30);
+            builder.Property(e => e.Abbreviation).HasMaxLength(300);
 
             builder.HasMany(e => e.Components)
                 .WithOne(c => c.ComponentManufacturer)
@@ -19,21 +19,21 @@ namespace APBD_T7_s33596.Infrastructure.DB.Configuration
                  new ComponentManufacturer
                  {
                      Id = 1,
-                     Attribute = "Intel",
+                     Abbreviation = "Intel",
                      FullName = "Intel Corporation",
                      FoundationDate = new DateOnly(1968, 7, 18)
                  },
                  new ComponentManufacturer
                  {
                      Id = 2,
-                     Attribute = "AMD",
+                     Abbreviation = "AMD",
                      FullName = "Advanced Micro Devices",
                      FoundationDate = new DateOnly(1969, 5, 1)
                  },
                  new ComponentManufacturer
                  {
                      Id = 3,
-                     Attribute = "NVIDIA",
+                     Abbreviation = "NVIDIA",
                      FullName = "NVIDIA Corporation",
                      FoundationDate = new DateOnly(1993, 4, 5)
                  }

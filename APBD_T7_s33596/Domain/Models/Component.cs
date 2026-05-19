@@ -7,10 +7,10 @@
         public string Description { get; set; } = string.Empty;
 
         public int ComponentManufacturerId { get; set; }
-        public ComponentManufacturer? ComponentManufacturer { get; set; }
+        public ComponentManufacturer ComponentManufacturer { get; set; } = null!;
 
         public int ComponentTypeId { get; set; }
-        public ComponentType? ComponentType { get; set; }
+        public ComponentType ComponentType { get; set; } = null!;
 
         public List<PCComponent> PCComponents { get; set; } = [];
     }
